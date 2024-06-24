@@ -1,16 +1,26 @@
-// This function clears all the values
-function clearScreen() {
-    document.getElementById("result").value = "";
+var input = document.getElementById('input');
+let buttons = document.querySelectorAll('button');
+
+function others(buttonValue) {
+    if (buttonValue === 'C') {
+        output = '';
+    }
+    else if (buttonValue === '=') {
+        output = calculate(input.value);
+    }
 }
- 
-// This function displays the values
-function display(value) {
-    document.getElementById("result").value += value;
-}
- 
-// This function evaluates the expression and returns the result
-function calculate() {
-    var p = document.getElementById("result").value;
-    var q = eval(p);
-    document.getElementById("result").value = q;
+
+function calculations(buttonValue) {
+    if (operator == '+') {
+        result = number1 + number2;
+    }
+    else if (operator == '-') {
+        result = number1 - number2;
+    }
+    else if (operator == '*') {
+        result = number1 * number2;
+    }
+    else {
+        result = number1 / number2
+    }
 }
